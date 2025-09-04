@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Unblocker</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f9f9f9; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+        .container { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        input[type="text"] { width: 300px; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 0.5rem 1rem; border: none; background: #e62117; color: #fff; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #c21c13; }
+        iframe { margin-top: 2rem; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container" id="main-container">
+        <h2>YouTube Embedder</h2>
+        <div id="video-container"></div>
+    </div>
+    <script>
+        // Prompt for YouTube URL immediately
+        const url = window.prompt('Enter the YouTube URL to embed:');
+        const videoContainer = document.getElementById('video-container');
+        if (url) {
+            videoContainer.innerHTML = `<iframe width="560" height="315" src="${url}" frameborder="0" allowfullscreen></iframe>`;
+        } else {
+            videoContainer.innerHTML = '<p style="color:red;">No URL provided.</p>';
+        }
+    </script>
+</body>
+</html>
